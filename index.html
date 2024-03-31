@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title_bar">
+                <h2>Where in the world</h2>
+
+                <button class="toggle">
+                        <img src="images/dark_mode.png" alt="error" class="mode" width="20px">
+                        <h3>Dark mode</h3>
+                </button>
+            </div>
+
+            <div class="menu_bar">
+                <div class="search_bar">
+                    <input type="text" placeholder="Search country" class="search">
+                    <img src="images/search.png" alt="error" width="30px" height="20px">
+                </div>
+                
+                <div class="filter">
+                    <div class="inner_filter">
+                        <p>Filter by region</p>
+                        <button class="filter_btn">
+                            <img src="images/down.png" alt="error" width="30px" height="25px" class="drop_icon">
+                        </button>
+                    </div>
+
+                    <div class="drop drop_down">
+                        <p class="region">All</p>
+                        <p class="region">Africa</p>
+                        <p class="region">America</p>
+                        <p class="region">Asia</p>
+                        <p class="region">Europe</p>
+                        <p class="region">Oceania</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <section>
+            <div class="countries">
+             
+            </div>
+        </section>
+
+        <div class="countryModal show">
+            <button class="back"><i class="fa-solid fa-arrow-left"></i>Back</button>
+
+            <div class="modal">
+                <div class="leftModal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" alt="error">
+                </div>
+    
+                <div class="rightModal">
+                    <h1>Germany</h1>
+
+                    <div class="modalInfo">
+                        <div class="innerLeft inner">
+                            <p><strong>Native Name: </strong>${data.nativeName}</p>
+                            <p><strong>Population: </strong>${data.population}</p>
+                            <p><strong>Region: </strong>${data.region}</p>
+                            <p><strong>Sub-region: </strong>${data.subregion}</p>
+                        </div>
+        
+                        <div class="innerRight inner">
+                            <p><strong>Capital: </strong>${data.capital}</p>
+                            <p><strong>Top Level Domain: </strong>${data.topLevelDomain}</p>
+                            <p><strong>Currencies: </strong>${data.currencies}</p>
+                            <p><strong>Language: </strong>${data.languages}</p>
+                        </div>
+                    </div>
+                    <div class="border">
+                        <p><strong>Border Countries:</strong>${data.borders}</p>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
+<script src="main.js"></script>
